@@ -1,3 +1,4 @@
+import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
@@ -12,15 +13,24 @@ public class Main {
         {
             if (i % 6 == 0)
             {
-                System.out.print(i + " ");
+                System.out.println(i + " ");
                 i--;
             }
-
         }
-
+        System.out.println();
         /* zad.2 Napisz program który będzie uzupełniał tablicę 5-cio elementową int[] liczbami
          * wprowadzanymi z klawiatury (użyć klasy Scanner), a następnie będzie wyświetlał elementy tablicy
          * za pomocą pętli forEach powiększone o 11 */
+        int[] tab = new int[5];
+        Scanner scan = new Scanner(System.in);
+        for( int i = 0; i < tab.length; i++)
+        {
+            System.out.print("podaj nr "+i+": ");
+            tab[i] = scan.nextInt();
+        }
+        for (int tablica : tab) {
+            System.out.print(tablica + " ");
+        }
 
 
     }
